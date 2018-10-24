@@ -1,0 +1,34 @@
+
+/*
+class HelloWorldTask extends DefaultTask {
+    // @TaskAction 表示该Task要执行的动作,即在调用该Task时，hello()方法将被执行
+    @TaskAction
+    def hello(){
+        println "hello world "+ project.hasProperty('yourName')? yourName : "柴东"
+    }
+}
+*/
+
+// hello使用了默认的message值
+/*task hello(type:HelloWorldTask)
+//import de.undercouch.gradle.tasks.download.Download
+
+task downloadZipFile(type: Download) {
+    src 'https://github.com/michel-kraemer/gradle-download-task/archive/1.0.zip'
+    dest new File(buildDir, '1.0.zip')
+}
+
+task downloadAndUnzipFile(dependsOn: downloadZipFile, type: Copy) {
+    from zipTree(downloadZipFile.dest)
+    into buildDir
+}*/
+
+/*
+task downloadFile(type: Download) {
+    src 'http://10.4.110.24:8080/examples/pdff.pdf'
+    dest buildDir
+}
+task unzipDownloadFile(dependsOn: downloadFile, type: Exec) {
+    commandLine 'cmd', '/c', '7za x "%cd%\\download.7z" -y -aoa -o"%cd%\\temp"'
+}
+*/
